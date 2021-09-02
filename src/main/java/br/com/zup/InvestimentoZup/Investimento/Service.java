@@ -13,6 +13,11 @@ public class Service {
     }
 
 
+    public double simularInvestimento(Investimento investimento){
+        double porcetagem = 0.5;
+        return investimento.getMoneyAplicado() * ((porcetagem / 100)) * investimento.getMeses();
+
+    }
 
 
 
