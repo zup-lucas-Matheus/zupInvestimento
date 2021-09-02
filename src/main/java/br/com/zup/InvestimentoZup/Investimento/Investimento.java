@@ -1,4 +1,4 @@
-package br.com.zup.InvestimentoZup.domain;
+package br.com.zup.InvestimentoZup.Investimento;
 
 
 import lombok.AllArgsConstructor;
