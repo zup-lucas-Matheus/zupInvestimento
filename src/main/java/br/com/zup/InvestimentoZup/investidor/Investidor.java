@@ -1,4 +1,4 @@
-package br.com.zup.InvestimentoZup.Investimento;
+package br.com.zup.InvestimentoZup.investidor;
 
 
 import lombok.AllArgsConstructor;
@@ -8,13 +8,14 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "investimentos")
-public class Investimento {
+public class Investidor {
 
     @Id
     private String email;
@@ -22,6 +23,7 @@ public class Investimento {
     private String telefone;
     private Long moneyAplicado;
     private int meses;
+    private LocalDate dataDeEntrada;
 
 
 }
