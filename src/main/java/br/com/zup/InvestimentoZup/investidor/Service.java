@@ -1,8 +1,6 @@
-package br.com.zup.InvestimentoZup.Investimento;
+package br.com.zup.InvestimentoZup.investidor;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.time.LocalDate;
 
 @org.springframework.stereotype.Service
 public class Service {
@@ -10,14 +8,14 @@ public class Service {
     private Repository repository;
 
     //Metódo cadastrar investimento.
-    public double saveInvestimento(Investimento investimento) throws Exception {
+    public double saveInvestimento(Investidor investimento) throws Exception {
          repository.save(investimento);
          investimento.getDataDeEntrada();
          return simularInvestimento(investimento);
     }
 
     //Metódo para simular o investimento do aplicado.
-    public double simularInvestimento(Investimento investimento) throws Exception {
+    public double simularInvestimento(Investidor investimento) throws Exception {
         if (investimento.getMoneyAplicado() < 1000) {
             throw new Exception("Valor de investimento não pode ser menor que R$ 1.000");
         }
