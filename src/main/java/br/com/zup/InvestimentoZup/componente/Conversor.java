@@ -1,5 +1,6 @@
 package br.com.zup.InvestimentoZup.componente;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.ModelMap;
@@ -8,8 +9,8 @@ import org.springframework.ui.ModelMap;
 public class Conversor {
 
     @Bean
-    public ModelMap modelMap(){
-        return new ModelMap();
+    public ModelMapper modelMap(){
+        return new ModelMapper();
     }
 
 }
